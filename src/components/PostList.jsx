@@ -28,7 +28,11 @@ const PostList = () => {
 
 const handleDelete = async (id)=>{
   
-  alert("Confirm Delete?")
+  confirm("confirm delete action");
+
+  if(confirm("confirm delete action") ===false){
+    return
+  }
   
  try {
   const res = await fetch(`http://localhost:3000/api/post/${id}`,{
